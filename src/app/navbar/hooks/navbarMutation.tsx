@@ -17,3 +17,14 @@
 //   }
 //   return res.data;
 // };
+
+
+import React from 'react'
+
+export default function navbarMutation() {
+  return (
+    <div>
+      biar ga kena eslint
+    </div>
+  )
+}
