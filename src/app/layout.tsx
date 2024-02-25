@@ -1,9 +1,12 @@
 'use client';
 import { Poppins } from 'next/font/google';
+import { DefaultSeo } from 'next-seo';
 
 import '@/styles/globals.css';
 
 import clsxm from '@/lib/clsxm';
+
+import SEO from '@/seo.config';
 
 const poppins = Poppins({
   display: 'swap',
@@ -16,6 +19,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
       <body>
+        <DefaultSeo {...SEO} />
         <div className={clsxm(poppins.variable)}>
           {children}
         </div>
