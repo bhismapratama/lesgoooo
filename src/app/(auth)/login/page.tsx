@@ -72,11 +72,6 @@ export default function LoginPage() {
                 placeholder='Enter your email'
                 validation={{
                   required: 'Field must be filled',
-                  pattern: {
-                    // value: sesuaikan sendiri yeah,
-                    value: /^[A-Za-z0-9\s.,'-]+$/,
-                    message: 'Email tidak valid',
-                  },
                 }}
               />
               <Input

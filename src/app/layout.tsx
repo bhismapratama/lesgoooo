@@ -12,6 +12,8 @@ import '@/styles/globals.css';
 import api from '@/lib/api';
 import clsxm from '@/lib/clsxm';
 
+import Toast from '@/components/Toast';
+
 import SEO from '@/seo.config';
 
 const poppins = Poppins({
@@ -38,6 +40,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
     <html lang='en'>
       <body>
         <QueryClientProvider client={queryClient}>
+          <Toast />
           <DefaultSeo {...SEO} />
           <div className={clsxm(poppins.variable)}>
             {children}

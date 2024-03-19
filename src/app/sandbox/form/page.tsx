@@ -85,10 +85,9 @@ export default function InputPage() {
             id='photo'
             label='Upload File'
             validation={{ required: 'Photo must be filled' }}
-            accept=".jpg, .jpeg, .png"
+            accept={{ 'image/*': ['.png', '.jpg', '.jpeg'] }}
             helperText='You can upload file with .png, .jpg, atau .jpeg extension.'
           />
-          {/* // accept={{ 'image/*': ['.png', '.jpg', '.jpeg'] }} */}
           <Button type='submit' className='w-full'>
             Submit
           </Button>

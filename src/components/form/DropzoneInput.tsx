@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FileRejection, useDropzone } from 'react-dropzone';
+import { Accept, FileRejection, useDropzone } from 'react-dropzone';
 import {
   Controller,
   get,
@@ -25,7 +25,7 @@ export type DropzoneInputProps = {
   helperText?: string;
   hideError?: boolean;
   validation?: RegisterOptions;
-  accept?: string;
+  accept?: Accept;
   acceptTypes?: string;
   maxFiles?: number;
   className?: string;
@@ -36,8 +36,7 @@ export default function DropzoneInput({
   label,
   validation,
   helperText,
-  accept = ".jpg, .jpeg, .png",
-  // accept = ".jpg, .jpeg, .png",
+  accept = { 'image/*': ['.jpg', '.jpeg', '.png'] },
   maxFiles = 1,
   className,
 }: DropzoneInputProps) {
@@ -127,8 +126,7 @@ export default function DropzoneInput({
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop,
-    // accept: accept as unknown as string,
-    accept: accept as string,
+    accept,
     maxFiles,
     maxSize: 3545728,
   });
