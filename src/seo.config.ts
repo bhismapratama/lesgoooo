@@ -5,13 +5,13 @@ const config: DefaultSeoProps = {
     type: 'website',
     locale: 'id_ID',
     url: 'http://localhost:3000',
-    siteName: 'ARA 5.0',
+    siteName: 'haloo',
     images: [
       {
         url: 'http://localhost:3000/og/logo.png',
         width: 1200,
         height: 630,
-        alt: 'ARA 5.0',
+        alt: 'haloo',
       },
     ],
   },
@@ -20,10 +20,10 @@ const config: DefaultSeoProps = {
     site: '@site',
     cardType: 'summary_large_image',
   },
-  titleTemplate: '%s | A Renewal Agent 5.0',
+  titleTemplate: '%s | halo',
   description:
-    'A Renewal Agents',
-  defaultTitle: 'A Renewal Agent',
+    'halo',
+  defaultTitle: 'halo',
   additionalLinkTags: [
     {
       rel: 'icon',

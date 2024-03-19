@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 
-import Typography from '@/components/Typography';
 import clsxm from '@/lib/clsxm';
+
+import Typography from '@/components/Typography';
 
 export default function HelperText({
   children,

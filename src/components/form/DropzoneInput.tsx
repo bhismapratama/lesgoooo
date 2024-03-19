@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Accept, FileRejection, useDropzone } from 'react-dropzone';
+import { FileRejection, useDropzone } from 'react-dropzone';
 import {
   Controller,
   get,
@@ -25,7 +25,7 @@ export type DropzoneInputProps = {
   helperText?: string;
   hideError?: boolean;
   validation?: RegisterOptions;
-  accept?: Accept;
+  accept?: string;
   acceptTypes?: string;
   maxFiles?: number;
   className?: string;
@@ -36,7 +36,8 @@ export default function DropzoneInput({
   label,
   validation,
   helperText,
-  accept = { 'image/*': ['.jpg', '.jpeg', '.png'] },
+  accept = ".jpg, .jpeg, .png",
+  // accept = ".jpg, .jpeg, .png",
   maxFiles = 1,
   className,
 }: DropzoneInputProps) {
@@ -126,7 +127,8 @@ export default function DropzoneInput({
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop,
-    accept,
+    // accept: accept as unknown as string,
+    accept: accept as string,
     maxFiles,
     maxSize: 3545728,
   });
@@ -140,7 +142,7 @@ export default function DropzoneInput({
             weight='bold'
             variant='t'
             color='label'
-            className='text-[16px] leading-[24px] text-black'
+            className='text-[16px] leading-[24px] text-whites-1100'
           >
             {label}
           </Typography>
@@ -182,7 +184,7 @@ export default function DropzoneInput({
                 <div className='flex flex-col items-center gap-1'>
                   <FaRegFileLines className='w-16 h-16' />
                   <Typography
-                    className='text-center md:text-[18px] text-black font-poppins'
+                    className='text-center md:text-[18px] font-poppins'
                     variant='btn'
                     weight='bold'
                   >
@@ -199,7 +201,7 @@ export default function DropzoneInput({
               </div>
             )}
             {files.length === 0 && (
-              <Button className='mt-3 py-2 px-4 bg-blue-500'>
+              <Button className='mt-3 py-2 px-4'>
                 <Typography
                   variant='btn'
                   weight='bold'

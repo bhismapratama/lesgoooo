@@ -13,15 +13,6 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 // import { showToast, SUCCESS_TOAST, WARNING_TOAST } from '@/components/Toast';
 import Typography from '@/components/Typography';
 
-// import useMerchStore from '@/store/useMerchStore';
-// import Ellipse from './nav-img/Ellipse.png';
-// import ExploIT from './nav-img/ExploIT.png';
-// import Olimpiade from './nav-img/Group.png';
-// import LogoSVG from './nav-img/Logo-ARA.svg';
-// import LogoAra from './nav-img/LogoARA.png';
-// import Register from './nav-img/Register.png';
-// import CTF from './nav-img/Vector.png';
-
 function Navbar() {
   // const router = useRouter();
   // const token = getToken();
@@ -551,7 +542,7 @@ function Navbar() {
                     color='white'
                     weight='semibold'
                   >
-                    ARA 5.0
+                    halo
                   </Typography>
                 </UnstyledLink>
                 <div className='my-2'></div>
@@ -753,7 +744,7 @@ function Navbar() {
                   className='flex justify-center items-center'
                 >
                   <Typography as="p" variant='p' color='white' weight='bold'>
-                    ARA 5.0
+                    halo
                   </Typography>
                 </UnstyledLink>
                 <div className='my-2'></div>

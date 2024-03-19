@@ -1,13 +1,14 @@
-import 'yet-another-react-lightbox/styles.css';
-
 import * as React from 'react';
 import { FaRegFileAlt } from 'react-icons/fa';
 import { HiOutlineTrash } from 'react-icons/hi2';
 import Lightbox from 'yet-another-react-lightbox';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
+import 'yet-another-react-lightbox/styles.css';
+
 import Button from '@/components/buttons/Button';
 import Typography from '@/components/Typography';
+
 import { FileWithPreview } from '@/types/form/dropzone';
 
 type FilePreviewProps = {

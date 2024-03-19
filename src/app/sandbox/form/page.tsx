@@ -4,6 +4,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { HiAcademicCap } from 'react-icons/hi';
 
 import Button from '@/components/buttons/Button';
+import DropzoneInput from '@/components/form/DropzoneInput';
 import Input from '@/components/form/Input';
 
 type FormValues = {
@@ -80,6 +81,14 @@ export default function InputPage() {
             rightIcon={HiAcademicCap}
             disabled
           />
+          <DropzoneInput
+            id='photo'
+            label='Upload File'
+            validation={{ required: 'Photo must be filled' }}
+            accept=".jpg, .jpeg, .png"
+            helperText='You can upload file with .png, .jpg, atau .jpeg extension.'
+          />
+          {/* // accept={{ 'image/*': ['.png', '.jpg', '.jpeg'] }} */}
           <Button type='submit' className='w-full'>
             Submit
           </Button>
